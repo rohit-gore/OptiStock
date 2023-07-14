@@ -15,21 +15,21 @@ const methodOverride = require('method-override')
 const mysql = require('mysql2');
 const bodyparser = require('body-parser');
 
-const url = process.env.urlDB;
+// const url = process.env.urlDB;
 
 // const urlDB = 'mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}';
 
 app.use(bodyparser.json());
 
-var mysqlConnection = mysql.createConnection(url);
+// var mysqlConnection = mysql.createConnection(url);
 
-// var mysqlConnection = mysql.createConnection({
-//     host: process.env.db_host,
-//     port: 3306,
-//     user: process.env.db_user_name,
-//     password: process.env.db_password,
-//     database: process.env.db_name
-// });
+var mysqlConnection = mysql.createConnection({
+    host: process.env.db_host,
+    port: process.env.db_port,
+    user: process.env.db_user_name,
+    password: process.env.db_password,
+    database: process.env.db_name
+});
 
 mysqlConnection.connect((err) => {
     if (!err)
