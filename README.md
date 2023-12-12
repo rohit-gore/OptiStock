@@ -5,7 +5,7 @@
   
 ## Authors
 
-- [@Anurag](https://github.com/AnuragSingh6242).
+- [@Rohit](https://github.com/rohit-gore).
   
 ## Features
 
